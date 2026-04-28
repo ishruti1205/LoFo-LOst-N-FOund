@@ -64,34 +64,34 @@ com.example.lofo/
 ## Screenshots
 
 ### Splash & Home Feed
-<img src="Screenshots/splash.png" width="220"/> <img src="Screenshots/home_feed.png" width="220"/>
+<img src="Screenshots/splash.png" height = "400" width="200"/> <img src="Screenshots/home_feed.png" height = "400" width="200"/>
 
 ### Login & Sign Up
-<img src="Screenshots/login.png" width="220"/> <img src="Screenshots/signup.png" width="220"/> <img src="Screenshots/verify_email.png" width="220"/>
+<img src="Screenshots/login.png" height = "400" width="200"/> <img src="Screenshots/signup.png" height = "400" width="200"/> <img src="Screenshots/verify_email.png" height = "400" width="200"/>
 
 ### Home — Tab Filtering
-<img src="Screenshots/tab_all.png" width="220"/> <img src="Screenshots/tab_lost.png" width="220"/> <img src="Screenshots/tab_found.png" width="220"/> <img src="Screenshots/tab_resolved.png" width="220"/>
+<img src="Screenshots/tab_all.png" height = "400" width="200"/> <img src="Screenshots/tab_lost.png" height = "400" width="200"/> <img src="Screenshots/tab_found.png" height = "400" width="200"/> <img src="Screenshots/tab_resolved.png" height = "400" width="200"/>
 
 ### Search
-<img src="Screenshots/search.png" width="220"/>
+<img src="Screenshots/search.png" height = "400" width="200"/>
 
 ### Item Detail & Owner Options
-<img src="Screenshots/item_detail_1.png" width="220"/> <img src="Screenshots/item_detail_2.png" width="220"/> <img src="Screenshots/item_detail_3.png" width="220"/> 
+<img src="Screenshots/item_detail_1.png" height = "400" width="200"/> <img src="Screenshots/item_detail_2.png" height = "400" width="200"/> <img src="Screenshots/item_detail_3.png" height = "400" width="200"/> 
 <br> 
-<img src="Screenshots/owner_options.png" width="220"/> <img src="Screenshots/mark_as_resolved.png" width="220"/> 
-<img src="Screenshots/edit_item.png" width="220"/> <img src="Screenshots/delete_confirm.png" width="220"/>
+<img src="Screenshots/owner_options.png" height = "400" width="200"/> <img src="Screenshots/mark_as_resolved.png" height = "400" width="200"/> 
+<img src="Screenshots/edit_item.png" height = "400" width="200"/> <img src="Screenshots/delete_confirm.png" height = "400" width="200"/>
 
 ### Add Post
-<img src="Screenshots/add_post_bottom_sheet.png" width="220"/> <img src="Screenshots/add_post_form_1.png" width="220"/> <img src="Screenshots/add_post_form_2.png" width="220"/>
+<img src="Screenshots/add_post_bottom_sheet.png" height = "400" width="200"/> <img src="Screenshots/add_post_form_1.png" height = "400" width="200"/> <img src="Screenshots/add_post_form_2.png" height = "400" width="200"/>
 
 ### Profile
-<img src="Screenshots/profile.png" width="220"/> <img src="Screenshots/my_posts.png" width="220"/>
+<img src="Screenshots/profile.png" height = "400" width="200"/> <img src="Screenshots/my_posts.png" height = "400" width="200"/>
 
 ### Edit Profile
-<img src="Screenshots/edit_profile_closed.png" width="220"/> <img src="Screenshots/edit_profile_name.png" width="220"/> <img src="Screenshots/edit_profile_email.png" width="220"/> <img src="Screenshots/edit_profile_password.png" width="220"/>
+<img src="Screenshots/edit_profile_closed.png" height = "400" width="200"/> <img src="Screenshots/edit_profile_name.png" height = "400" width="200"/> <img src="Screenshots/edit_profile_email.png" height = "400" width="200"/> <img src="Screenshots/edit_profile_password.png" height = "400" width="200"/>
 
 ### Help & Support / Logout
-<img src="Screenshots/help_support.png" width="220"/> <img src="Screenshots/logout.png" width="220"/>
+<img src="Screenshots/help_support.png" height = "400" width="200"/> <img src="Screenshots/logout.png" height = "400" width="200"/>
 
 ---
 
