@@ -64,51 +64,51 @@ com.example.lofo/
 ## Screenshots
 
 ### Splash & Home Feed
-<img src="screenshots/splash.png" width="220"> 
-<img src="screenshots/home_feed.png" width="220">
+<img src="Screenshots/splash.png" width="220"> 
+<img src="Screenshots/home_feed.png" width="220">
 
 ### Login & Sign Up
-<img src="screenshots/login.png" width="220"> 
-<img src="screenshots/signup.png" width="220"> 
-<img src="screenshots/verify_email.png" width="220">
+<img src="Screenshots/login.png" width="220"> 
+<img src="Screenshots/signup.png" width="220"> 
+<img src="Screenshots/verify_email.png" width="220">
 
 ### Home — Tab Filtering
-<img src="screenshots/tab_all.png" width="220"> 
-<img src="screenshots/tab_lost.png" width="220"> 
-<img src="screenshots/tab_found.png" width="220"> 
-<img src="screenshots/tab_resolved.png" width="220">
+<img src="Screenshots/tab_all.png" width="220"> 
+<img src="Screenshots/tab_lost.png" width="220"> 
+<img src="Screenshots/tab_found.png" width="220"> 
+<img src="Screenshots/tab_resolved.png" width="220">
 
 ### Search
-<img src="screenshots/search.png" width="220">
+<img src="Screenshots/search.png" width="220">
 
 ### Item Detail & Owner Options
-<img src="screenshots/item_detail_1.png" width="220"> 
-<img src="screenshots/item_detail_2.png" width="220"> 
-<img src="screenshots/item_detail_3.png" width="220"> 
+<img src="Screenshots/item_detail_1.png" width="220"> 
+<img src="Screenshots/item_detail_2.png" width="220"> 
+<img src="Screenshots/item_detail_3.png" width="220"> 
 <br> 
-<img src="screenshots/owner_options.png" width="220"> 
-<img src="screenshots/mark_as_resolved.png" width="220"> 
-<img src="screenshots/edit_item.png" width="220"> 
-<img src="screenshots/delete_confirm.png" width="220">
+<img src="Screenshots/owner_options.png" width="220"> 
+<img src="Screenshots/mark_as_resolved.png" width="220"> 
+<img src="Screenshots/edit_item.png" width="220"> 
+<img src="Screenshots/delete_confirm.png" width="220">
 
 ### Add Post
-<img src="screenshots/add_post_bottom_sheet.png" width="220"> 
-<img src="screenshots/add_post_form_1.png" width="220">
-<img src="screenshots/add_post_form_2.png" width="220">
+<img src="Screenshots/add_post_bottom_sheet.png" width="220"> 
+<img src="Screenshots/add_post_form_1.png" width="220">
+<img src="Screenshots/add_post_form_2.png" width="220">
 
 ### Profile
-<img src="screenshots/profile.png" width="220"> 
-<img src="screenshots/my_posts.png" width="220">
+<img src="Screenshots/profile.png" width="220"> 
+<img src="Screenshots/my_posts.png" width="220">
 
 ### Edit Profile
-<img src="screenshots/edit_profile_closed.png" width="220"> 
-<img src="screenshots/edit_profile_name.png" width="220"> 
-<img src="screenshots/edit_profile_email.png" width="220"> 
-<img src="screenshots/edit_profile_password.png" width="220">
+<img src="Screenshots/edit_profile_closed.png" width="220"> 
+<img src="Screenshots/edit_profile_name.png" width="220"> 
+<img src="Screenshots/edit_profile_email.png" width="220"> 
+<img src="Screenshots/edit_profile_password.png" width="220">
 
 ### Help & Support / Logout
-<img src="screenshots/help_support.png" width="220"> 
-<img src="screenshots/logout.png" width="220">
+<img src="Screenshots/help_support.png" width="220"> 
+<img src="Screenshots/logout.png" width="220">
 
 ---
 
