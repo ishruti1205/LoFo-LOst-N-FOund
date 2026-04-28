@@ -187,6 +187,8 @@ The app supports light mode only. Dark mode / system theme adaptation is disable
 
 ## What's Not in Yet
 
+- Open camera, image crop functionalities during image upload
+- Permissions (gallery, camera) pop-up to users
 - In-app chat between users (Firebase Realtime Database)
 - Push notifications via FCM (Firebase Cloud Messaging)
 - Advanced search filters (category, date range)
