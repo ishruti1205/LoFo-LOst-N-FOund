@@ -1,0 +1,132 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LoFo" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.LoFo" parent="Base.Theme.LoFo">
+        <!-- Make status bar transparent -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.LoFo.Splash" parent="Theme.SplashScreen.IconBackground">
+        <!-- Background color -->
+        <item name="windowSplashScreenBackground">@color/color_topbar</item>
+        <!-- App icon -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/app_icon</item>
+        <!-- Optional: icon background -->
+        <item name="windowSplashScreenIconBackgroundColor">@color/color_topbar</item>
+        <!-- After splash → main theme -->
+        <item name="postSplashScreenTheme">@style/Theme.LoFo</item>
+    </style>
+
+    <!--
+    Custom TextInputLayout style.
+    Inherits Material OutlinedBox, overrides:
+    - boxStrokeColor     → accent when focused, grey when idle
+    - hintTextColor      → accent when focused, grey when idle
+    - cursorColor        → accent orange
+    - textColorHighlight → accent orange (text selection highlight)
+-->
+
+    <style name="LoFo.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/text_input_hint_color</item>
+        <item name="boxStrokeColor">@color/text_input_stroke_color</item>
+        <item name="boxBackgroundColor">@color/color_searchbar</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="helperTextTextAppearance">@style/LoFo.HelperText</item>
+    </style>
+
+    <style name="LoFo.TextInputEditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColorHighlight">@color/color_accent_dark</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_accent</item>
+        <item name="errorTextColor">@color/color_error_red</item>
+        <item name="boxStrokeErrorColor">@color/color_error_red</item>
+    </style>
+
+    <style name="LoFo.HelperText" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_input_hint_color</item>
+    </style>
+
+    <!-- Tab Layout-->
+    <style name="LoFo.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="android:background">@drawable/bg_tabs</item>
+    </style>
+
+    <!-- Bottom Sheet - Removes the white gap between the bottom sheet and the screen edge -->
+    <style name="LoFo_BottomSheetDialog" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/LoFo_BottomSheetStyle</item>
+        <!-- This is the key addition: prevents Material from enforcing nav bar contrast
+             which is what triggers the inset padding that creates the gap -->
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+
+    <style name="LoFo_BottomSheetStyle" parent="Widget.Material3.BottomSheet">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <!-- Prevent the sheet widget itself from fitting system windows -->
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <!--
+        Full-screen transparent dialog style used by AddPostFragment.
+        STYLE_NO_TITLE removes the title bar.
+        windowBackground transparent lets our drawable handle all visuals.
+        windowIsFloating false makes the window fill the requested layout.
+    -->
+    <style name="LoFo_FullScreenDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- FAB circle shape -->
+    <style name="ShapeAppearance.LoFo.FABCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--
+    Accent-colored DatePickerDialog.
+    Used in ItemDetailFragment when editing the date field.
+    colorPrimary controls the header, selection circle, and OK button color.
+-->
+    <style name="LoFo_DatePickerDialog" parent="Theme.Material3.Light.Dialog">
+        <item name="colorPrimary">@color/color_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/color_topbar</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/icon_tint</item>
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+    </style>
+
+    <!--
+    Sleek PopupMenu style for the item detail 3-dot menu.
+    Uses app background colors and Poppins font.
+    Apply via: new PopupMenu(new ContextThemeWrapper(requireContext(),
+                    R.style.LoFo_PopupMenu), anchorView)
+-->
+    <style name="LoFo_PopupMenu" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup_menu</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:itemBackground">@android:color/transparent</item>
+    </style>
+
+
+</resources>

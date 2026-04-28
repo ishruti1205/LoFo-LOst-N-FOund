@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Shared form for both "Report Lost" and "Report Found".
+    PostType ("lost" or "found") is passed as a Fragment argument.
+    The title/button text swap based on postType in Java.
+-->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/formScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_topbar"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- ─── Top Bar ─── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_topbar"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="@color/white"
+                android:background="@drawable/bg_icon_btn_round"
+                android:contentDescription="@string/cd_back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="@string/title_report_lost"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp">
+
+            <!-- ─── Image Picker (optional) ───────────────────────────────────── -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_item_photo"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:textColor="@color/icon_tint"
+                android:layout_marginBottom="8dp" />
+
+            <FrameLayout
+                android:id="@+id/frameImagePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="160dp"
+                android:background="@drawable/bg_image_picker"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Placeholder (shown when no image selected) -->
+                <LinearLayout
+                    android:id="@+id/layoutImagePlaceholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_add_photo"
+                        app:tint="@color/hint_color"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/label_tap_to_add_photo"
+                        android:textSize="13sp"
+                        android:textColor="@color/hint_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_photo_optional"
+                        android:textSize="11sp"
+                        android:textColor="@color/color_tab_unselected" />
+                </LinearLayout>
+
+                <!-- Preview (shown after image is selected) -->
+                <ImageView
+                    android:id="@+id/ivImagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    android:contentDescription="@null" />
+
+                <!-- X button to remove selected image -->
+                <ImageView
+                    android:id="@+id/ivRemoveImage"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_close"
+                    android:background="@drawable/bg_badge_red"
+                    android:padding="4dp"
+                    app:tint="@color/white"
+                    android:visibility="gone"
+                    android:contentDescription="@null"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+            <!-- ─── Item Name (REQUIRED) ─────────────────────────────────────── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilItemName"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_item_name"
+                app:helperText="@string/required_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etItemName"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Category (REQUIRED) ──────────────────────────────────────── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCategory"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_category"
+                app:endIconMode="dropdown_menu"
+                app:endIconTint="@color/hint_color"
+                app:helperText="@string/required_field">
+
+                <!-- AutoCompleteTextView renders the dropdown arrow correctly -->
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/actvCategory"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Location (REQUIRED) ──────────────────────────────────────── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLocation"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_location"
+                app:startIconDrawable="@drawable/ic_location_pin"
+                app:startIconTint="@color/hint_color"
+                app:helperText="@string/required_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocation"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Date Picker (REQUIRED) — three NumberPicker wheels ─── -->
+            <TextView
+                android:id="@+id/tvDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_date"
+                android:textSize="13sp"
+                android:textColor="@color/icon_tint"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvDateRequired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/required_field"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:textColor="@color/text_hint_light"
+                android:layout_marginTop="3dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/color_searchbar"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:strokeColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingVertical="10dp">
+
+                    <!-- Day picker -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_day"
+                            android:textSize="12sp"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginBottom="4dp" />
+
+                        <NumberPicker
+                            android:id="@+id/pickerDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/NumberPickerTextStyle"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="80dp"
+                        android:background="@color/hint_color"
+                        android:alpha="0.4" />
+
+                    <!-- Month picker -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_month"
+                            android:textSize="12sp"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginBottom="4dp" />
+
+                        <NumberPicker
+                            android:id="@+id/pickerMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="80dp"
+                        android:background="@color/hint_color"
+                        android:alpha="0.4" />
+
+                    <!-- Year picker -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_year"
+                            android:textSize="11sp"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginBottom="4dp" />
+
+                        <NumberPicker
+                            android:id="@+id/pickerYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ─── Description (REQUIRED) ───────────────────────────────────── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescription"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_description"
+                app:helperText="@string/required_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:justificationMode="inter_word"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:minLines="3"
+                    android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Posted By (REQUIRED — auto-filled, not editable) ─── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPostedBy"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_posted_by"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@color/hint_color"
+                app:helperText="@string/helper_auto_filled">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPostedBy"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/icon_tint"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Contact Email (REQUIRED — auto-filled, not editable) ─── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContactEmail"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:hint="@string/hint_contact_email"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/hint_color"
+                app:helperText="@string/helper_email_auto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContactEmail"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/icon_tint"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Contact Number (OPTIONAL — clickable, opens dialer) ─── -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContactNumber"
+                style="@style/LoFo.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:hint="@string/hint_contact_number"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@color/hint_color"
+                app:helperText="@string/optional_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContactNumber"
+                    style="@style/LoFo.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ─── Error message ─────────────────────────────────────────────── -->
+            <TextView
+                android:id="@+id/tvFormError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_flag_lost"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <!-- ─── Submit Button ─────────────────────────────────────────────── -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/btn_post_item"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/color_accent"
+                app:cornerRadius="12dp" />
+
+            <!-- ─── Progress ──────────────────────────────────────────────────── -->
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                app:indicatorColor="@color/color_accent"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Subtle rounded background for informational note boxes. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/color_accent_dark" />  <!-- 10% accent orange -->
+    <stroke android:width="1dp" android:color="#33FF6B35" />
+    <corners android:radius="10dp" />
+</shape>

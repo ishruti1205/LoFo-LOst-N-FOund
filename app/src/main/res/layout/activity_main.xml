@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <!-- ─── Fragment Container ─── -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- ─── Bottom Navigation ─── -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        app:itemGravity="center"
+        app:itemIconSize="35dp"
+        app:itemPaddingTop="0dp"
+        app:itemPaddingBottom="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:itemActiveIndicatorStyle="@color/color_accent"
+        android:background="@color/color_topbar"
+        app:itemIconTint="@drawable/bottom_nav_icon_tint"
+        app:itemTextColor="@drawable/bottom_nav_icon_tint"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+<!--    app:itemRippleColor="@color/color_searchbar"-->
+
+<!--    android:padding="0dp"-->
+<!--    android:paddingTop="0dp"-->
+<!--    android:paddingBottom="0dp"-->
+<!--    app:itemPaddingTop="0dp"-->
+<!--    app:itemPaddingBottom="0dp"-->
+<!--    app:activeIndicatorLabelPadding="0dp"-->
+
+    <!-- ─── FAB: Add Post (center, above BottomNav) ─── -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fabAddPost"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        app:layout_anchor="@id/bottomNavigationView"
+        app:layout_anchorGravity="center"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        app:cornerRadius="50dp"
+        app:backgroundTint="@color/color_accent"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/bg_page"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        android:translationZ="20dp"
+        android:stateListAnimator="@null"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fabAddPost"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:shapeAppearanceOverlay="@style/CircularShape"-->
+    <!--        android:padding="0dp"-->
+    <!--        app:useCompatPadding="false"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:layout_anchor="@id/bottomNavigationView"-->
+    <!--        app:layout_anchorGravity="center"-->
+    <!--        android:src="@drawable/ic_add"-->
+    <!--        android:contentDescription="@string/cd_add_post"-->
+    <!--        app:backgroundTint="@color/color_accent"-->
+    <!--        app:tint="@color/white"-->
+    <!--        app:fabSize="normal"-->
+    <!--        app:elevation="10dp" />-->

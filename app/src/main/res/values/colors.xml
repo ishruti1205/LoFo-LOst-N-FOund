@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ─── Brand Colors ─── -->
+<color name="color_accent">#FF6B35</color>        <!-- LoFo Orange -->
+<color name="color_accent_dark">#1AFF6B35</color>  <!-- LoFo Orange Dark-->
+<color name="color_topbar">#1A1A2E</color>         <!-- Deep Navy -->
+<color name="color_searchbar">#2D2D4E</color>      <!-- Muted Navy -->
+
+<!-- ─── Status Flag Colors ─── -->
+<color name="color_flag_lost">#E24B4A</color>      <!-- Red for Lost -->
+<color name="color_flag_found">#1D9E75</color>     <!-- Green for Found -->
+<color name="color_flag_resolved">#888888</color>  <!-- Grey for Resolved -->
+
+<!-- ─── Background Colors ─── -->
+<color name="bg_page">#F0F0F5</color>              <!-- Light grey page bg -->
+<color name="white">#FFFFFF</color>
+<color name="black">#000000</color>
+
+<!-- ─── Text Colors ─── -->
+<color name="text_primary">#1A1A2E</color>
+<color name="text_secondary">#555555</color>
+<color name="text_hint">#AAAAAA</color>
+<color name="text_hint_light">#42424C</color>
+<color name="hint_color">#888888</color>
+
+<!-- ─── Icon Tints ─── -->
+<color name="icon_tint">#CCCCCC</color>
+<color name="icon_tint_muted">#888888</color>
+
+<!-- ─── Tab Colors ─── -->
+<color name="color_tab_unselected">#888888</color>
+
+<!-- ─── Badge ─── -->
+<color name="color_badge_red">#FF3B30</color>
+<color name="color_error_red">#B1261D</color>
+
+<!--    Bottom Sheet Dialog-->
+<color name="bg_bottom_sheet">#F0F0F5</color>
+<color name="bg_lost_option">#2D2D4E</color>
+<color name="bg_found_option">#2D2D4E</color>
+
+    <!-- ─── Card Image Backgrounds (per category) ─── -->
+<color name="bg_wallet">#FDECEA</color>
+<color name="bg_electronics">#E8F8F2</color>
+<color name="bg_jewellery">#FFF9E6</color>
+<color name="bg_bag">#F0F0FF</color>
+<color name="bg_documents">#E8F4FD</color>
+<color name="bg_keys">#FFF3E0</color>
+
+</resources>

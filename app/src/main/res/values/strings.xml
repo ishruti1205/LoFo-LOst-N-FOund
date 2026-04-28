@@ -1,0 +1,242 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">LoFo</string>
+    <string name="app_name_first_half">Lo</string>
+    <string name="app_name_second_half">Fo</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_filter">Filter</string>
+    <string name="cd_messages">Messages</string>
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_search_filter">Search Filter</string>
+    <string name="cd_add_post">Add Post</string>
+    <string name="cd_item_image">Item Image</string>
+
+    <!-- Search -->
+    <string name="hint_search">Search lost or found items</string>
+    <string name="filter_coming_soon">Advanced filters coming soon!</string>
+
+    <!-- Tabs -->
+    <string name="tab_all">All Items</string>
+    <string name="tab_lost">Lost</string>
+    <string name="tab_found">Found</string>
+    <string name="tab_resolved">Resolved</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Auth screens -->
+    <string name="tagline">Helping reunite people with their belongings</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="helper_password">Minimum 6 characters</string>
+    <string name="label_stay_logged_in">Stay logged in</string>
+    <string name="label_or">or</string>
+    <string name="label_no_account">Don\'t have an account?</string>
+    <string name="label_have_account">Already have an account?</string>
+    <string name="label_logging_in">Logging in…</string>
+    <string name="title_create_account">Create Account</string>
+
+    <!-- Buttons -->
+    <string name="btn_login">Log In</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="btn_logout">Log Out</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Validation errors -->
+    <string name="error_email_required">Email is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_no_match">Passwords don\'t match</string>
+    <string name="error_name_required">Name is required</string>
+
+    <!-- Profile -->
+    <string name="label_profile">My Profile</string>
+    <string name="cd_profile_picture">Profile picture</string>
+    <string name="placeholder_name">Your Name</string>
+    <string name="placeholder_email_contact">your@email.com</string>
+
+    <!-- Logout dialog -->
+    <string name="dialog_logout_title">Log Out</string>
+    <string name="dialog_logout_message">Are you sure you want to log out?</string>
+
+    <!-- Navigation -->
+    <string name="cd_back">Go back</string>
+
+    <!-- Add post form -->
+    <string name="title_report_lost">Report Lost Item</string>
+    <string name="title_report_found">Report Found Item</string>
+    <string name="label_item_photo">Item Photo</string>
+    <string name="label_tap_to_add_photo">Tap to add a photo</string>
+    <string name="label_photo_optional">Optional — but helpful!</string>
+    <string name="hint_item_name">Item Name (e.g. Black Wallet)</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_location">Where was it lost / found?</string>
+    <string name="hint_description">Describe the item (colour, brand, marks…)</string>
+    <string name="hint_contact_number">Contact Number (Optional)</string>
+    <string name="hint_contact_email">Contact Email</string>
+    <string name="required_field">* Required</string>
+    <string name="optional_field">Optional</string>
+    <string name="btn_post_lost">Post Lost Item</string>
+    <string name="btn_post_found">Post Found Item</string>
+    <string name="btn_post_item">Post Item</string>
+    <string name="helper_email_auto">*Required — Auto-Filled</string>
+    <string name="error_description_required">Please describe the item</string>
+    <string name="hint_posted_by">Posted by</string>
+    <string name="posted_by_user">Posted by %1$s</string>
+    <string name="helper_auto_filled">*Required — Auto-Filled</string>
+    <string name="date_format">dd/MM/yyyy</string>
+
+    <string name="hint_location_lost">Where was it lost?</string>
+    <string name="hint_location_found">Where was it found?</string>
+    <string name="hint_date_lost">When was it lost?</string>
+    <string name="hint_date_found">When was it found?</string>
+
+    <!-- Form - Date picker labels -->
+    <string name="hint_date">When was it lost / found?</string>
+    <string name="label_day">Day</string>
+    <string name="label_month">Month</string>
+    <string name="label_year">Year</string>
+
+    <!-- Validation -->
+    <string name="error_item_name_required">Please enter the item name</string>
+    <string name="error_category_required">Please select a category</string>
+    <string name="error_location_required">Please enter the location</string>
+    <!-- Date validation -->
+    <string name="error_date_required">Please select the date by scrolling the wheels</string>
+
+    <!-- Home feed -->
+    <string name="empty_no_items">No items here yet</string>
+    <string name="flag_lost">LOST</string>
+    <string name="flag_found">FOUND</string>
+    <string name="flag_resolved">RESOLVED</string>
+    <string name="placeholder_item_title">Item Name</string>
+    <string name="placeholder_category">Category</string>
+    <string name="placeholder_desc">Description</string>
+    <string name="placeholder_location">Location</string>
+    <string name="placeholder_time">Time</string>
+
+    <!-- Detail screen -->
+    <string name="label_description">Description</string>
+    <string name="label_no_description">No description provided.</string>
+    <string name="btn_chat_with_poster">Chat with Poster</string>
+    <string name="chat_coming_soon">Chat feature coming soon!</string>
+
+    <string name="label_date">Date</string>
+    <string name="label_reward">Reward</string>
+    <string name="label_contact_number">Contact Number</string>
+    <string name="label_contact_email">Email Address</string>
+<!--    <string name="label_posted_by">Posted by</string>-->
+    <string name="placeholder_date">Date of Upload</string>
+    <string name="label_tap_to_call">Tap to call</string>
+    <string name="placeholder_contact_number">+91 9000000009</string>
+    <string name="placeholder_contact_email">posteremail@gmail.com</string>
+    <string name="placeholder_user">Poster Name</string>
+
+    <!-- Add post bottom sheet -->
+    <string name="label_add_post_title">What do you want to report?</string>
+    <string name="label_add_post_subtitle">Help the community by posting</string>
+    <string name="option_report_lost">I Lost Something</string>
+    <string name="option_report_lost_desc">Post details to help find your item</string>
+    <string name="option_report_found">I Found Something</string>
+    <string name="option_report_found_desc">Help return an item to its owner</string>
+
+    <!-- Item detail owner actions -->
+    <string name="action_mark_resolved">Mark as Resolved</string>
+    <string name="action_edit">Edit Post</string>
+    <string name="action_delete">Delete Post</string>
+    <string name="dialog_resolve_title">Mark as Resolved?</string>
+    <string name="dialog_resolve_message">This will move the item to the Resolved section for all users.</string>
+    <string name="btn_mark_resolved">Mark Resolved</string>
+    <string name="toast_status_resolved">Item marked as resolved!</string>
+    <string name="placeholder_dialog_edit_title">Edit Item</string>
+    <string name="edit_found_item">Edit Found Item</string>
+    <string name="edit_lost_item">Edit Lost Item</string>
+    <string name="error_edit_required">Title, description and location are required</string>
+    <string name="error_edit_date">Enter date in DD/MM/YYYY format</string>
+    <string name="toast_item_updated">Item updated successfully!</string>
+    <string name="error_update_failed">Update failed. Please try again.</string>
+    <string name="dialog_delete_title">Delete Post?</string>
+    <string name="dialog_delete_message">This will permanently remove the post. This cannot be undone.</string>
+    <string name="btn_delete">Delete</string>
+    <string name="toast_item_deleted">Post deleted.</string>
+    <string name="error_delete_failed">Delete failed. Please try again.</string>
+<!--    <string name="label_posted_by">Posted by %s</string>-->
+
+    <!-- Buy Me a Coffee -->
+    <string name="dialog_coffee_title">Item Found!</string>
+    <string name="dialog_coffee_message">Great news! If LoFo helped you recover your item, consider buying the developer a coffee ☕ — it keeps the app running and free for everyone.</string>
+    <string name="btn_coffee_yes">Buy a Coffee ☕</string>
+    <string name="btn_coffee_no">Maybe Later</string>
+
+    <!-- Add post toast -->
+    <string name="toast_item_posted_lost">Lost item posted! We hope you find it 🙏</string>
+    <string name="toast_item_posted_found">Found item posted! The owner will be grateful 🙌</string>
+
+    <!-- Profile -->
+    <string name="label_my_posts">My Posts</string>
+    <string name="option_edit_profile">Edit Profile</string>
+    <string name="label_help_support">Help &amp; Support</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="label_messages">Messages</string>
+    <string name="notifications_coming_soon">Notifications coming soon!</string>
+
+    <!-- Help & Support -->
+    <string name="label_about_lofo">About LoFo</string>
+    <string name="about_lofo_text">LoFo is a community-driven Lost &amp; Found platform that helps people reconnect with their belongings. If you have any questions, suggestions, or feedback, we\'re happy to hear from you.</string>
+    <string name="label_working_hours">Support hours:\nMon–Sat, 9 AM – 6 PM IST</string>
+    <string name="label_email_us">Email Us</string>
+    <string name="label_report_bug">Report a Bug</string>
+    <string name="label_privacy_policy">Privacy Policy</string>
+    <string name="app_version">LoFo v1.0.0</string>
+
+    <!-- EditProfileFragment sections -->
+    <string name="section_display_name">Display Name</string>
+    <string name="section_change_email">Change Email</string>
+    <string name="section_change_password">Change Password</string>
+    <string name="hint_display_name">Full Name</string>
+    <string name="btn_save_name">Save Name</string>
+    <string name="btn_save_email">Update Email</string>
+    <string name="btn_save_password">Update Password</string>
+
+    <string name="hint_current_password">Current password</string>
+    <string name="hint_new_email">New email address</string>
+    <string name="hint_new_password">New password (min. 6 chars)</string>
+    <string name="msg_reauthenticate">Enter your current password to continue</string>
+    <string name="btn_verify">Verify</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Email verification info note -->
+    <string name="msg_email_verify_info">A verification link will be sent to your new email address. Your email will only change after you click the link. This keeps your account secure.</string>
+
+    <!-- Toast messages -->
+    <string name="toast_name_updated">Name updated!</string>
+    <string name="toast_email_another_user">This email is already in use by another account.</string>
+    <string name="toast_email_same">New email cannot be the same as current email.</string>
+    <string name="toast_email_verify_sent">Verification link sent! Check your new inbox and click the link to confirm the change.</string>
+    <string name="toast_email_redirect">Verify your new email, then login again</string>
+    <string name="toast_password_updated">Password updated!</string>
+    <string name="toast_password_same">New password cannot be the same as current password.</string>
+    <string name="toast_password_redirect">Login again</string>
+
+    <!-- Validation errors / auth errors -->
+    <string name="error_name_required_edit">Name can\'t be empty</string>
+    <string name="error_email_required_edit">New email cannot be empty</string>
+    <string name="error_email_invalid">Please enter a valid email address</string>
+    <string name="error_wrong_password">Incorrect current password</string>
+    <string name="error_password_required_edit">Current password is required</string>
+    <string name="error_passwords_no_match_edit">Passwords don\'t match</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Signup verification screen -->
+    <string name="label_verify_email_title">Check Your Inbox 📬</string>
+    <string name="label_verify_email_subtitle">We\'ve sent a verification link to:</string>
+    <string name="label_verify_spam_note">Didn\'t receive it? Check your spam/junk folder.</string>
+    <string name="btn_go_to_login">Go to Login</string>
+
+</resources>

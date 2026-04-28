@@ -1,0 +1,40 @@
+# /build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android / Gradle
+*.iml
+.gradle/
+build/
+app/build/
+
+# Local config (VERY IMPORTANT)
+local.properties
+
+# IDE
+.idea/
+captures/
+
+# Firebase
+google-services.json
+app/google-services.json
+
+# Signing keys (CRITICAL)
+*.keystore
+*.jks
+keystore.properties
+
+# NDK / Native
+.externalNativeBuild/
+.cxx/
+
+# APK / Bundles
+*.apk
+!download_app.apk
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db
