@@ -180,6 +180,9 @@ Typing in the search bar filters results in real time using a `MediatorLiveData`
 **Edit Profile:**  
 Three accordion sections — Display Name, Change Email, Change Password — all collapsed by default. Only one section can be open at a time. Email and password changes require the current password for re-authentication before proceeding.
 
+**UI Theme:**  
+The app supports light mode only. Dark mode / system theme adaptation is disabled to maintain consistent UI design.
+
 ---
 
 ## What's Not in Yet
