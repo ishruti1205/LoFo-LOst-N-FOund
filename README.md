@@ -108,39 +108,39 @@ This project requires a Firebase project and a Cloudinary account. Neither `goog
 5. Enable **Email enumeration protection** under Authentication → Settings (recommended).
 6. Create a Firestore database in your preferred region.
 7. Apply the following security rules under Firestore → Rules:
-```
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
- 
-    match /items/{itemId} {
-      allow read: if true;
- 
-      allow create: if request.auth != null
-                    && request.auth.token.email_verified == true
-                    && request.resource.data.uploadedByUid == request.auth.uid
-                    && request.resource.data.title is string
-                    && request.resource.data.title.size() > 0
-                    && request.resource.data.status in ['lost', 'found'];
- 
-      allow update: if request.auth != null
-                    && request.auth.token.email_verified == true
-                    && resource.data.uploadedByUid == request.auth.uid;
- 
-      allow delete: if request.auth != null
-                    && resource.data.uploadedByUid == request.auth.uid;
+    ```
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+    
+        match /items/{itemId} {
+          allow read: if true;
+    
+          allow create: if request.auth != null
+                        && request.auth.token.email_verified == true
+                        && request.resource.data.uploadedByUid == request.auth.uid
+                        && request.resource.data.title is string
+                        && request.resource.data.title.size() > 0
+                        && request.resource.data.status in ['lost', 'found'];
+    
+          allow update: if request.auth != null
+                        && request.auth.token.email_verified == true
+                        && resource.data.uploadedByUid == request.auth.uid;
+    
+          allow delete: if request.auth != null
+                        && resource.data.uploadedByUid == request.auth.uid;
+        }
+    
+        match /users/{userId} {
+          allow read, write: if request.auth != null
+                            && request.auth.uid == userId;
+        }
+      }
     }
+    ```
  
-    match /users/{userId} {
-      allow read, write: if request.auth != null
-                         && request.auth.uid == userId;
-    }
-  }
-}
-```
- 
-8. Create a composite index on the `items` collection: `status ASC, createdAt DESC`
-   (Firestore will prompt you with a direct link the first time the query runs)
+8. Create a composite index on the `items` collection: `status ASC, createdAt DESC`  
+(Firestore will prompt you with a direct link the first time the query runs)
 
 **Cloudinary**
 
@@ -149,11 +149,11 @@ Credentials are not hardcoded in the project. They are read from `local.properti
 1. Create a free account at [cloudinary.com](https://cloudinary.com)
 2. Go to Settings → Upload → Upload Presets → add a new preset set to **Unsigned**
 3. Create or open `local.properties` at the project root and add:
-```
-cloudinary.cloud_name=YOUR_CLOUD_NAME
-cloudinary.api_key=YOUR_API_KEY
-cloudinary.upload_preset=YOUR_PRESET_NAME
-```
+    ```
+    cloudinary.cloud_name=YOUR_CLOUD_NAME
+    cloudinary.api_key=YOUR_API_KEY
+    cloudinary.upload_preset=YOUR_PRESET_NAME
+    ```
  
 `local.properties` is listed in `.gitignore` and will never be committed.
 
@@ -165,19 +165,19 @@ Open the project in Android Studio, let Gradle sync, then run on a device or emu
 
 ## Features in detail
 
-**Authentication**
+**Authentication:**  
 Signup sends a verification email immediately after account creation. The app blocks login for unverified accounts. Email and password changes require re-authentication with the current password, and the user is signed out afterward — they must log back in with the updated credentials.
  
-**Add Post**
+**Add Post:**  
 The + FAB opens a bottom sheet chooser (Lost or Found). The form collects item name, category (dropdown), location, date (day/month/year scroll picker), description, and an optional photo. The Posted By name and contact email auto-fill from the logged-in account. Images upload to Cloudinary and the returned URL is stored in Firestore.
  
-**Item Detail**
+**Item Detail:**  
 Opens as a bottom sheet. Shows full item info with relative timestamps ("3 days ago"). Contact email opens a mail client on tap; phone number opens the dialer. Long-pressing either copies it to clipboard. For the item owner, a three-dot icon opens a styled bottom sheet menu with Mark as Resolved, Edit Post, and Delete Post options.
  
-**Search and Filter**
+**Search and Filter:**  
 Typing in the search bar filters results in real time using a `MediatorLiveData` that observes both the active Firestore query and the search string simultaneously — so search works correctly within whichever tab (Lost, Found, Resolved, All) is currently selected. The filter icon switches to an X while text is present to clear the search quickly.
  
-**Edit Profile**
+**Edit Profile:**  
 Three accordion sections — Display Name, Change Email, Change Password — all collapsed by default. Only one section can be open at a time. Email and password changes require the current password for re-authentication before proceeding.
 
 ---
