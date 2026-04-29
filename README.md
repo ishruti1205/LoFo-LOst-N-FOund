@@ -45,7 +45,7 @@ People lose things. Someone else finds them. The problem has always been connect
 
 ---
 
-## Project structure
+## Project Structure
 
 ```
 com.example.lofo/
